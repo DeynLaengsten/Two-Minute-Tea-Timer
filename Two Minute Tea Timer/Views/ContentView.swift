@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var timerModel = TimerModel()
+    
     var body: some View {
-        Text("Hello, world!")
+        
+        Text(timerModel.getTime())
             .padding()
+    
+            .onAppear(perform: {
+                timerModel.startTimer()
+            })
     }
 }
 

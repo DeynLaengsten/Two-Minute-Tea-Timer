@@ -13,6 +13,7 @@
 		8903BEA925FE46F400E17EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8903BEA825FE46F400E17EE2 /* Assets.xcassets */; };
 		8903BEAC25FE46F400E17EE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8903BEAB25FE46F400E17EE2 /* Preview Assets.xcassets */; };
 		8903BEAF25FE46F400E17EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8903BEAD25FE46F400E17EE2 /* LaunchScreen.storyboard */; };
+		8903BEB925FE4A0B00E17EE2 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8903BEAB25FE46F400E17EE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8903BEAE25FE46F400E17EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8903BEB025FE46F400E17EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				8903BEA225FE46F100E17EE2 /* AppDelegate.swift */,
 				8903BEA425FE46F100E17EE2 /* SceneDelegate.swift */,
-				8903BEA625FE46F100E17EE2 /* ContentView.swift */,
+				8903BEBF25FE654D00E17EE2 /* Views */,
+				8903BEBD25FE653800E17EE2 /* Models */,
 				8903BEA825FE46F400E17EE2 /* Assets.xcassets */,
 				8903BEAD25FE46F400E17EE2 /* LaunchScreen.storyboard */,
 				8903BEB025FE46F400E17EE2 /* Info.plist */,
@@ -73,6 +76,22 @@
 				8903BEAB25FE46F400E17EE2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8903BEBD25FE653800E17EE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8903BEBF25FE654D00E17EE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8903BEA625FE46F100E17EE2 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 				8903BEA325FE46F100E17EE2 /* AppDelegate.swift in Sources */,
 				8903BEA525FE46F100E17EE2 /* SceneDelegate.swift in Sources */,
 				8903BEA725FE46F100E17EE2 /* ContentView.swift in Sources */,
+				8903BEB925FE4A0B00E17EE2 /* TimerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
