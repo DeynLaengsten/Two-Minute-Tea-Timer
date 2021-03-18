@@ -14,6 +14,7 @@
 		8903BEAC25FE46F400E17EE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8903BEAB25FE46F400E17EE2 /* Preview Assets.xcassets */; };
 		8903BEAF25FE46F400E17EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8903BEAD25FE46F400E17EE2 /* LaunchScreen.storyboard */; };
 		8903BEB925FE4A0B00E17EE2 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */; };
+		894C959C2602A4D1002FEDCE /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C959B2602A4D1002FEDCE /* MyColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8903BEAE25FE46F400E17EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8903BEB025FE46F400E17EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		894C959B2602A4D1002FEDCE /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8903BEBD25FE653800E17EE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				894C959B2602A4D1002FEDCE /* MyColors.swift */,
 				8903BEB825FE4A0B00E17EE2 /* TimerModel.swift */,
 			);
 			path = Models;
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8903BEA325FE46F100E17EE2 /* AppDelegate.swift in Sources */,
+				894C959C2602A4D1002FEDCE /* MyColors.swift in Sources */,
 				8903BEA525FE46F100E17EE2 /* SceneDelegate.swift in Sources */,
 				8903BEA725FE46F100E17EE2 /* ContentView.swift in Sources */,
 				8903BEB925FE4A0B00E17EE2 /* TimerModel.swift in Sources */,
