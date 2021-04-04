@@ -30,22 +30,19 @@ class TimerModel: ObservableObject {
     }
  
     @objc func updateTimer() {
-        if(duration == 0) {
+        let aktDate = Date()
+        timePassed = aktDate.timeIntervalSince(startTime)
+        let secondsPassed = Int(timePassed)
+
+        if(secondsPassed > initDuration) {
             timer.invalidate()
             duration = initDuration
-
+        } else if(secondsPassed == initDuration) {
+            duration = 0
             let systemSoundID: SystemSoundID = 1005
-            
             AudioServicesPlaySystemSound(systemSoundID)
-            
         } else {
-            let aktDate = Date()
-            timePassed = aktDate.timeIntervalSince(startTime)
-            let secondsPassed = Int(timePassed)
-//            print(round(input: timePassed))
-//            print(secondsPassed)
             duration = initDuration - secondsPassed
-//            print (duration)
         }
         
     }
