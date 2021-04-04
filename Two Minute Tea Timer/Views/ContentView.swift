@@ -10,7 +10,7 @@ import UIKit
 
 struct ContentView: View {
     
-    @ObservedObject var timerModel = TimerModel(startTime: 120)
+    @ObservedObject var timerModel = TimerModel(startDuration: 120)
     let myColors = MyColors()
 
     var body: some View {
@@ -23,7 +23,7 @@ struct ContentView: View {
             Pulsation(pulsColor: myColors.pulsColor)
             Track(trackColor: myColors.backgroundColor)
             progressCircle(progressColor: myColors.progressBarColor, circleColor: myColors.circleColor, percentage: timerModel.getPercentage())
-                
+            
             Button(action: { timerModel.startTimer()
             })
             {
@@ -35,7 +35,7 @@ struct ContentView: View {
             }
             .onAppear(perform: {
                 timerModel.startTimer()
-        })
+            })
         }
     }
 }

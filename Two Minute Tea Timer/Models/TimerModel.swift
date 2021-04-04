@@ -11,52 +11,69 @@ import AVFoundation
 
 class TimerModel: ObservableObject {
     var timer = Timer()
-    @Published var duration: Int
-    let initTime: Int
+    @Published var duration: Int = 0
+    var startTime: Date
+    let initDuration: Int
+    var timePassed: TimeInterval = 0
+    var runningAnimation: Bool = true
     
-    init(startTime: Int) {
-        duration = startTime
-        initTime = startTime
+    init(startDuration: Int) {
+        initDuration = startDuration
+        startTime = Date()
     }
     
     func startTimer() {
         timer.invalidate()
-        duration = initTime - 1
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
-
-    func startTimer(with seconds: Int) {
-        timer.invalidate()
-        duration = seconds - 1
+        startTime = Date()
+        duration = initDuration
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
  
     @objc func updateTimer() {
         if(duration == 0) {
             timer.invalidate()
-            duration = initTime
+            duration = initDuration
 
             let systemSoundID: SystemSoundID = 1005
             
             AudioServicesPlaySystemSound(systemSoundID)
             
         } else {
-            duration -= 1
+            let aktDate = Date()
+            timePassed = aktDate.timeIntervalSince(startTime)
+            let secondsPassed = Int(timePassed)
+//            print(round(input: timePassed))
+//            print(secondsPassed)
+            duration = initDuration - secondsPassed
+//            print (duration)
         }
         
     }
     
     func getTime() -> String {
         return String(format: "%02d:%02d", duration / 60, duration % 60)
+//        return
+    }
+    
+    func round(input: Double) -> Int {
+        let temp = input * 1000.0
+        let out = Int(temp) / 1000
+        return out
     }
     
     func getPercentage() -> CGFloat {
-        return (CGFloat(duration) / CGFloat(initTime)) * CGFloat(100.0)
+        return (CGFloat(duration) / CGFloat(initDuration)) * CGFloat(100.0)
     }
     
     func getTimerIsRunning() -> Bool {
-        print(duration < initTime)
-        return (duration < initTime ? true : false)
+
         
+        if timer.isValid {
+            runningAnimation.toggle()
+        }
+//        return (duration < initDuration ? true : false)
+        print(runningAnimation)
+
+        return runningAnimation
     }
 }
